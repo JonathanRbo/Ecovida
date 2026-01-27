@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Cursos - EduPro</title>
+
+    <!-- Squeleton CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jrobertojunior/squeleton@main/squeleton.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light-gray">
+    <!-- HEADER -->
+    <header class="dashboard-header bg-white border-b-1">
+        <div class="container-fluid">
+            <nav class="d-flex f-align-center f-justify-between p-20-tb">
+                <div class="d-flex f-gap-30 f-align-center">
+                    <h2 class="m-0-all color-primary">EduPro</h2>
+                    <div class="nav-links d-none d-md-flex f-gap-25">
+                        <a href="#cursos" class="nav-link active">Meus Cursos</a>
+                        <a href="#certificados" class="nav-link">Certificados</a>
+                        <a href="#" class="nav-link">Suporte</a>
+                    </div>
+                </div>
+                <div class="d-flex f-gap-20 f-align-center">
+                    <span class="iccon-bell-1 more-25 cursor-pointer"></span>
+                    <div class="user-menu d-flex f-gap-10 f-align-center cursor-pointer">
+                        <img src="https://i.pravatar.cc/40?img=68" alt="Usuário" class="avatar-round">
+                        <span id="user-name">Estudante</span>
+                        <button onclick="handleLogout()" class="btn-sm btn-outline">Sair</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- WELCOME SECTION -->
+    <section class="p-40-tb bg-gradient-primary color-white">
+        <div class="container-fluid">
+            <div class="row f-align-center">
+                <div class="c-xs-12 c-md-8">
+                    <h1 class="more-50 m-15-b wow fadeInLeft">Bem-vindo de volta, <span id="welcome-name">Estudante</span>! 👋</h1>
+                    <p class="more-20 opacity-9 wow fadeInLeft" data-wow-delay="0.1s">Continue de onde parou e alcance seus objetivos</p>
+                </div>
+                <div class="c-xs-12 c-md-4 text-right">
+                    <div class="stats-card wow fadeInRight">
+                        <div class="d-flex f-gap-30 f-justify-end">
+                            <div class="text-center">
+                                <div class="more-40 m-10-b">5</div>
+                                <small class="opacity-8">Cursos</small>
+                            </div>
+                            <div class="text-center">
+                                <div class="more-40 m-10-b">0</div>
+                                <small class="opacity-8">Concluídos</small>
+                            </div>
+                            <div class="text-center">
+                                <div class="more-40 m-10-b">0</div>
+                                <small class="opacity-8">Certificados</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS SECTION -->
+    <section id="cursos" class="p-60-tb">
+        <div class="container-fluid">
+            <div class="m-40-b">
+                <h2 class="more-40 m-15-b">Meus Cursos</h2>
+                <p class="opacity-7">Continue aprendendo e alcance seus objetivos</p>
+            </div>
+
+            <div class="row gap-30">
+                <!-- Curso 1: Desenvolvimento Web -->
+                <div class="c-xs-12 c-sm-6 c-md-4 c-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-card bg-white border-rd-10 overflow-hidden hover-lift">
+                        <div class="course-thumbnail" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 180px; position: relative;">
+                            <div class="course-badge bg-warning color-dark p-10-all border-rd-5" style="position: absolute; top: 10px; right: 10px;">
+                                <small>Novo</small>
+                            </div>
+                            <div class="d-flex f-align-center f-justify-center h-100">
+                                <span class="iccon-code-1 more-60 color-white opacity-8"></span>
+                            </div>
+                        </div>
+                        <div class="p-25-all">
+                            <span class="badge badge-primary m-10-b">Desenvolvimento</span>
+                            <h4 class="m-15-b">Desenvolvimento Web Completo</h4>
+                            <p class="opacity-7 m-15-b">Aprenda HTML, CSS e JavaScript do zero ao avançado.</p>
+                            <div class="progress-bar bg-light-gray border-rd-20 m-15-b" style="height: 8px;">
+                                <div class="progress-fill bg-primary border-rd-20" style="width: 0%; height: 100%;"></div>
+                            </div>
+                            <div class="d-flex f-justify-between f-align-center m-15-b">
+                                <small class="opacity-7">0% concluído</small>
+                                <small class="opacity-7">1 aula</small>
+                            </div>
+                            <a href="curso.html?id=1" class="btn btn-primary w-100">Continuar Aprendendo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2: Marketing Digital -->
+                <div class="c-xs-12 c-sm-6 c-md-4 c-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="course-card bg-white border-rd-10 overflow-hidden hover-lift">
+                        <div class="course-thumbnail" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 180px; position: relative;">
+                            <div class="course-badge bg-warning color-dark p-10-all border-rd-5" style="position: absolute; top: 10px; right: 10px;">
+                                <small>Novo</small>
+                            </div>
+                            <div class="d-flex f-align-center f-justify-center h-100">
+                                <span class="iccon-megaphone-1 more-60 color-white opacity-8"></span>
+                            </div>
+                        </div>
+                        <div class="p-25-all">
+                            <span class="badge badge-danger m-10-b">Marketing</span>
+                            <h4 class="m-15-b">Marketing Digital Profissional</h4>
+                            <p class="opacity-7 m-15-b">Domine estratégias de tráfego, vendas e conversão.</p>
+                            <div class="progress-bar bg-light-gray border-rd-20 m-15-b" style="height: 8px;">
+                                <div class="progress-fill bg-danger border-rd-20" style="width: 0%; height: 100%;"></div>
+                            </div>
+                            <div class="d-flex f-justify-between f-align-center m-15-b">
+                                <small class="opacity-7">0% concluído</small>
+                                <small class="opacity-7">1 aula</small>
+                            </div>
+                            <a href="curso.html?id=2" class="btn btn-danger w-100">Continuar Aprendendo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3: UX/UI Design -->
+                <div class="c-xs-12 c-sm-6 c-md-4 c-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-card bg-white border-rd-10 overflow-hidden hover-lift">
+                        <div class="course-thumbnail" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 180px; position: relative;">
+                            <div class="course-badge bg-warning color-dark p-10-all border-rd-5" style="position: absolute; top: 10px; right: 10px;">
+                                <small>Novo</small>
+                            </div>
+                            <div class="d-flex f-align-center f-justify-center h-100">
+                                <span class="iccon-pen-tool-1 more-60 color-white opacity-8"></span>
+                            </div>
+                        </div>
+                        <div class="p-25-all">
+                            <span class="badge badge-info m-10-b">Design</span>
+                            <h4 class="m-15-b">UX/UI Design Completo</h4>
+                            <p class="opacity-7 m-15-b">Crie interfaces incríveis e experiências memoráveis.</p>
+                            <div class="progress-bar bg-light-gray border-rd-20 m-15-b" style="height: 8px;">
+                                <div class="progress-fill bg-info border-rd-20" style="width: 0%; height: 100%;"></div>
+                            </div>
+                            <div class="d-flex f-justify-between f-align-center m-15-b">
+                                <small class="opacity-7">0% concluído</small>
+                                <small class="opacity-7">1 aula</small>
+                            </div>
+                            <a href="curso.html?id=3" class="btn btn-info w-100">Continuar Aprendendo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 4: Python para Data Science -->
+                <div class="c-xs-12 c-sm-6 c-md-4 c-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="course-card bg-white border-rd-10 overflow-hidden hover-lift">
+                        <div class="course-thumbnail" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); height: 180px; position: relative;">
+                            <div class="course-badge bg-warning color-dark p-10-all border-rd-5" style="position: absolute; top: 10px; right: 10px;">
+                                <small>Novo</small>
+                            </div>
+                            <div class="d-flex f-align-center f-justify-center h-100">
+                                <span class="iccon-database-1 more-60 color-white opacity-8"></span>
+                            </div>
+                        </div>
+                        <div class="p-25-all">
+                            <span class="badge badge-success m-10-b">Data Science</span>
+                            <h4 class="m-15-b">Python para Data Science</h4>
+                            <p class="opacity-7 m-15-b">Análise de dados e Machine Learning com Python.</p>
+                            <div class="progress-bar bg-light-gray border-rd-20 m-15-b" style="height: 8px;">
+                                <div class="progress-fill bg-success border-rd-20" style="width: 0%; height: 100%;"></div>
+                            </div>
+                            <div class="d-flex f-justify-between f-align-center m-15-b">
+                                <small class="opacity-7">0% concluído</small>
+                                <small class="opacity-7">1 aula</small>
+                            </div>
+                            <a href="curso.html?id=4" class="btn btn-success w-100">Continuar Aprendendo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 5: Excel Avançado -->
+                <div class="c-xs-12 c-sm-6 c-md-4 c-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-card bg-white border-rd-10 overflow-hidden hover-lift">
+                        <div class="course-thumbnail" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 180px; position: relative;">
+                            <div class="course-badge bg-warning color-dark p-10-all border-rd-5" style="position: absolute; top: 10px; right: 10px;">
+                                <small>Novo</small>
+                            </div>
+                            <div class="d-flex f-align-center f-justify-center h-100">
+                                <span class="iccon-bar-chart-1 more-60 color-white opacity-8"></span>
+                            </div>
+                        </div>
+                        <div class="p-25-all">
+                            <span class="badge badge-warning m-10-b">Produtividade</span>
+                            <h4 class="m-15-b">Excel Avançado</h4>
+                            <p class="opacity-7 m-15-b">Domine fórmulas, tabelas dinâmicas e automação.</p>
+                            <div class="progress-bar bg-light-gray border-rd-20 m-15-b" style="height: 8px;">
+                                <div class="progress-fill bg-warning border-rd-20" style="width: 0%; height: 100%;"></div>
+                            </div>
+                            <div class="d-flex f-justify-between f-align-center m-15-b">
+                                <small class="opacity-7">0% concluído</small>
+                                <small class="opacity-7">1 aula</small>
+                            </div>
+                            <a href="curso.html?id=5" class="btn btn-warning w-100">Continuar Aprendendo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICADOS SECTION -->
+    <section id="certificados" class="p-60-tb bg-white">
+        <div class="container-fluid">
+            <div class="m-40-b">
+                <h2 class="more-40 m-15-b">Meus Certificados</h2>
+                <p class="opacity-7">Certificados dos cursos que você concluiu</p>
+            </div>
+
+            <div class="row">
+                <div class="c-xs-12">
+                    <div class="empty-state text-center p-60-all">
+                        <span class="iccon-award-1 more-80 opacity-3 m-20-b d-block"></span>
+                        <h3 class="m-15-b opacity-7">Nenhum certificado ainda</h3>
+                        <p class="opacity-5 m-30-b">Complete seus primeiros cursos para receber certificados</p>
+                        <a href="#cursos" class="btn btn-primary">Ver Meus Cursos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="p-40-tb bg-dark color-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="c-xs-12 text-center">
+                    <p class="opacity-7">© 2026 EduPro. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Squeleton JS Framework -->
+    <script src="https://cdn.jsdelivr.net/gh/jrobertojunior/squeleton@main/squeleton.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+
+        // Display user name
+        const userName = localStorage.getItem('userName') || 'Estudante';
+        document.getElementById('user-name').textContent = userName;
+        document.getElementById('welcome-name').textContent = userName;
+
+        // Logout function
+        function handleLogout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userName');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
