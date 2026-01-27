@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(curl:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfix: corrigir CDN do Squeleton Framework\n\nCorrige o link do CDN que estava incorreto e não funcionando:\n- CSS: cdn.squeleton.dev/squeleton.v4.min.css\n- JS: cdn.squeleton.dev/squeleton-main.v4.min.js\n\nArquivos atualizados:\n- index.html\n- login.html\n- dashboard.html\n- curso.html\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
