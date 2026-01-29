@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso completo de Meio Ambiente - Aprenda praticas sustentaveis e transforme o futuro do planeta">
+    <title>Curso de Meio Ambiente | Sustentabilidade na Pratica</title>
+
+    <!-- Squeleton CSS -->
+    <link rel="stylesheet" href="https://cdn.squeleton.dev/squeleton.v4.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Squeleton JavaScript (Head) -->
+    <script src="https://cdn.squeleton.dev/squeleton-main.v4.min.js"></script>
+
+    <style>
+        /* === PALETA ECO-FRIENDLY MODERNA === */
+        :root {
+            --primary: #10b981;
+            --primary-light: #34d399;
+            --primary-dark: #059669;
+            --primary-darker: #047857;
+            --secondary: #06b6d4;
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --success: #22c55e;
+            --bg-light: #ecfdf5;
+            --bg-cream: #f0fdf4;
+            --bg-white: #ffffff;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --text-light: #94a3b8;
+            --border-light: #d1fae5;
+            --border-medium: #a7f3d0;
+            --gradient-primary: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            --gradient-hero: linear-gradient(135deg, #ecfdf5 0%, #cffafe 50%, #f0fdf4 100%);
+            --gradient-dark: linear-gradient(135deg, #047857 0%, #0891b2 100%);
+            --shadow-sm: 0 4px 6px -1px rgba(16, 185, 129, 0.1);
+            --shadow-md: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+            --shadow-lg: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+            --shadow-glow: 0 0 40px rgba(16, 185, 129, 0.3);
+        }
+
+        /* === RESET E BASE === */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .primary { color: var(--primary); }
+        .text-gray { color: var(--text-gray); }
+        .text-light { color: var(--text-light); }
+        .bg-gradient { background: var(--gradient-primary); }
+
+        /* === FORMAS DECORATIVAS === */
+        .shape-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .shape-leaf {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-light);
+            border-radius: 0 70% 70% 70%;
+            opacity: 0.08;
+            transform: rotate(-45deg);
+            pointer-events: none;
+        }
+
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) rotate(-45deg); }
+            50% { transform: translateY(-20px) rotate(-45deg); }
+        }
+
+        .floating-slow {
+            animation: floatingSlow 8s ease-in-out infinite;
+        }
+
+        @keyframes floatingSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* === HEADER === */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo .iccon-heart-1 {
+            font-size: 28px;
+            color: var(--primary);
+            -webkit-text-fill-color: var(--primary);
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        /* === BOTOES === */
+        .btn {
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--border-medium);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            font-size: 17px;
+            padding: 18px 40px;
+            box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 40px -5px rgba(245, 158, 11, 0.5);
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-dark);
+            font-size: 17px;
+            padding: 18px 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero .shape-blob-1 {
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-light);
+        }
+
+        .hero .shape-blob-2 {
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+        }
+
+        .hero .shape-leaf-1 {
+            top: 15%;
+            right: 5%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .hero .shape-leaf-2 {
+            bottom: 10%;
+            left: 3%;
+            width: 150px;
+            height: 150px;
+            transform: rotate(135deg);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            border: 1px solid var(--border-medium);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-dark);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--primary-light);
+            opacity: 0.3;
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .video-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            border: 4px solid white;
+        }
+
+        .video-placeholder {
+            background: var(--gradient-dark);
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+        }
+
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .play-button {
+            width: 90px;
+            height: 90px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 32px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .play-button::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* === STATS BAR === */
+        .stats-bar {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            position: relative;
+            z-index: 10;
+            margin-top: -60px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 50px;
+            background: var(--border-light);
+        }
+
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        /* === SECTION STYLES === */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-light);
+            border: 1px solid var(--border-medium);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* === BENEFITS SECTION === */
+        .benefits {
+            background: var(--bg-white);
+            position: relative;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .benefit-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .benefit-text {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* === PRICING SECTION === */
+        .pricing {
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing .shape-leaf {
+            top: 10%;
+            left: -5%;
+            width: 250px;
+            height: 250px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            border: 2px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            height: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+            transform: scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-12px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pricing-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-icon.basic {
+            background: #e0f2fe;
+            color: #0284c7;
+        }
+
+        .pricing-icon.pro {
+            background: var(--bg-light);
+            color: var(--primary);
+        }
+
+        .pricing-icon.premium {
+            background: #fef3c7;
+            color: var(--accent);
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .pricing-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+
+        .pricing-price {
+            margin-bottom: 8px;
+        }
+
+        .pricing-price .currency {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-gray);
+            vertical-align: top;
+        }
+
+        .pricing-price .amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 52px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .pricing-period {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .pricing-features li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            width: 22px;
+            height: 22px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* === TESTIMONIALS === */
+        .testimonials {
+            background: white;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: var(--bg-cream);
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid var(--border-light);
+            height: 100%;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 80px;
+            font-family: Georgia, serif;
+            color: var(--primary);
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--accent);
+            font-size: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .testimonial-info h4 {
+            font-size: 17px;
+            margin-bottom: 4px;
+            color: var(--text-dark);
+        }
+
+        .testimonial-info p {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* === FAQ SECTION === */
+        .faq {
+            background: var(--bg-cream);
+            position: relative;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-medium);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            padding: 24px 28px;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 14px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 28px 24px;
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* === CTA SECTION === */
+        .cta {
+            background: var(--gradient-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta .shape-blob {
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            top: -150px;
+            right: -100px;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: #0f172a;
+            color: white;
+        }
+
+        .footer .logo {
+            -webkit-text-fill-color: white;
+            color: white;
+        }
+
+        .footer .logo .iccon-heart-1 {
+            color: var(--primary-light);
+            -webkit-text-fill-color: var(--primary-light);
+        }
+
+        .footer-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* === CAROUSEL === */
+        .slide__viewport {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide__prev,
+        .slide__next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .slide__prev:hover,
+        .slide__next:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slide__prev { left: -25px; }
+        .slide__next { right: -25px; }
+
+        .slide__dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        .slide__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-medium);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .slide__dot.is-selected {
+            background: var(--primary);
+            width: 36px;
+            border-radius: 6px;
+        }
+
+        /* === MODAL === */
+        .modal-dialog[aria-hidden="true"] {
+            display: none;
+        }
+
+        .dialog-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+        }
+
+        .dialog-inline {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .dialog-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-light);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-gray);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .dialog-close:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .modal-popup {
+            background: white;
+            position: relative;
+        }
+
+        /* === GUARANTEE BADGE === */
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: white;
+            border: 2px solid var(--border-medium);
+            padding: 16px 28px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guarantee-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        /* === VIDEO PROMO WIDGET === */
+        .video-promo-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .promo-trigger {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+            position: relative;
+            transition: all 0.4s ease;
+            border: 3px solid white;
+        }
+
+        .promo-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.5);
+        }
+
+        .promo-trigger .iccon-play-1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        /* Ping animation */
+        .promo-trigger::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            animation: promo-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .promo-trigger::after {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 2px solid var(--primary-light);
+            border-radius: 50%;
+            animation: promo-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes promo-ping {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            75%, 100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
+        }
+
+        /* Notification badge */
+        .promo-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 24px;
+            height: 24px;
+            background: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            border: 2px solid white;
+            animation: badge-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes badge-bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Floating message bubble */
+        .promo-bubble {
+            background: white;
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            max-width: 280px;
+            position: relative;
+            animation: bubble-entrance 0.5s ease-out forwards, bubble-float 3s ease-in-out infinite 0.5s;
+            transform-origin: bottom right;
+            border: 1px solid var(--border-light);
+        }
+
+        .promo-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 30px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+
+        @keyframes bubble-entrance {
+            0% {
+                opacity: 0;
+                transform: scale(0.8) translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes bubble-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .promo-bubble-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            background: var(--bg-light);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--text-gray);
+            transition: all 0.3s ease;
+        }
+
+        .promo-bubble-close:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .promo-new-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            animation: tag-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes tag-glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+        }
+
+        .promo-bubble-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .promo-bubble-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+
+        .promo-bubble-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .promo-bubble-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .promo-bubble-btn .iccon-play-1 {
+            font-size: 16px;
+        }
+
+        /* Video Modal */
+        .video-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .video-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .video-modal-content {
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+            transform: scale(0.9) translateY(30px);
+            transition: all 0.4s ease;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-modal.active .video-modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            width: 44px;
+            height: 44px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .video-modal-close:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .video-modal-player {
+            aspect-ratio: 16/9;
+            background: var(--gradient-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .video-modal-player .play-button-large {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-modal-player .play-button-large:hover {
+            transform: scale(1.1);
+        }
+
+        .video-modal-info {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 24px;
+            color: white;
+        }
+
+        .video-modal-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .video-modal-desc {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 16px;
+        }
+
+        .video-modal-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .video-modal-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Widget hidden state */
+        .video-promo-widget.hidden .promo-bubble {
+            display: none;
+        }
+
+        .video-promo-widget.minimized .promo-trigger {
+            width: 56px;
+            height: 56px;
+        }
+
+        .video-promo-widget.minimized .promo-trigger .iccon-play-1 {
+            font-size: 22px;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 991px) {
+            .stats-bar {
+                margin-top: 30px;
+                padding: 25px 20px;
+            }
+
+            .stat-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .slide__prev { left: 10px; }
+            .slide__next { right: 10px; }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-12px);
+            }
+        }
+
+        @media (max-width: 639px) {
+            .hero {
+                padding-top: 80px;
+            }
+
+            .video-placeholder {
+                min-height: 280px;
+            }
+
+            .play-button {
+                width: 70px;
+                height: 70px;
+                font-size: 24px;
+            }
+
+            .stats-bar {
+                border-radius: 16px;
+            }
+
+            .slide__prev,
+            .slide__next {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .slide__prev { left: 5px; }
+            .slide__next { right: 5px; }
+
+            .video-promo-widget {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .promo-trigger {
+                width: 60px;
+                height: 60px;
+            }
+
+            .promo-trigger .iccon-play-1 {
+                font-size: 24px;
+            }
+
+            .promo-bubble {
+                max-width: 260px;
+            }
+
+            .video-modal-content {
+                width: 95%;
+                border-radius: 16px;
+            }
+
+            .video-modal-close {
+                top: -45px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="d-flex f-items-center f-justify-between p-15-tb">
+                <div class="logo">
+                    <span class="iccon-heart-1"></span>
+                    <span>EcoVida</span>
+                </div>
+                <nav class="d-flex f-gap-10 sm-d-none">
+                    <a href="#beneficios" class="nav-link">Beneficios</a>
+                    <a href="#planos" class="nav-link">Planos</a>
+                    <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                <a href="#planos" class="btn btn-primary xs-d-none">
+                    <span class="iccon-graduation-1"></span>
+                    Matricule-se
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero p-80-tb xs-p-50-tb">
+        <!-- Elementos decorativos -->
+        <div class="shape-blob shape-blob-1"></div>
+        <div class="shape-blob shape-blob-2"></div>
+        <div class="shape-leaf shape-leaf-1 floating"></div>
+        <div class="shape-leaf shape-leaf-2 floating-slow"></div>
+
+        <div class="container">
+            <div class="row gap-50 f-items-center">
+                <div class="c-xs-12 c-md-6 hero-content">
+                    <div class="hero-badge wow fadeInDown">
+                        <span class="dot"></span>
+                        <span>Vagas limitadas - Turma 2026</span>
+                    </div>
+
+                    <h1 class="fs-15 md-fs-13 xs-fs-11 m-20-b wow fadeInUp" data-wow-delay="0.1s">
+                        Transforme o Futuro com
+                        <span class="hero-highlight text-gradient">Sustentabilidade</span>
+                    </h1>
+
+                    <p class="fs-9 text-gray m-35-b wow fadeInUp" data-wow-delay="0.2s">
+                        Aprenda as melhores praticas ambientais e torne-se um profissional qualificado em meio ambiente. Curso 100% online com certificado reconhecido nacionalmente.
+                    </p>
+
+                    <div class="d-flex f-gap-15 f-wrap m-40-b wow fadeInUp" data-wow-delay="0.3s">
+                        <a href="#planos" class="btn btn-accent">
+                            <span class="iccon-rocket-1"></span>
+                            Comece Agora
+                        </a>
+                        <a href="#video" class="btn btn-secondary">
+                            <span class="iccon-play-1"></span>
+                            Assista ao Video
+                        </a>
+                    </div>
+
+                    <div class="guarantee-badge wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="guarantee-icon">
+                            <span class="iccon-shield-1"></span>
+                        </div>
+                        <div>
+                            <div class="fw-600 fs-8">Garantia de 7 dias</div>
+                            <div class="fs-7 text-gray">100% do seu dinheiro de volta</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-md-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="video-wrapper" id="video">
+                        <div class="video-placeholder">
+                            <div class="text-center">
+                                <div class="play-button floating-slow">
+                                    <span class="iccon-play-1"></span>
+                                </div>
+                                <p class="m-20-t fs-8 opacity-9">Assista a aula demonstrativa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="p-0-tb">
+        <div class="container">
+            <div class="stats-bar wow fadeInUp">
+                <div class="row f-items-center">
+                    <div class="c-xs-6 c-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-target="5000">0</span>+
+                            </div>
+                            <div class="stat-label">Alunos Formados</div>
+                        </div>
+                    </div>
+                    <div class="c-xs-6 c-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-target="4.9">0</span>/5
+                            </div>
+                            <div class="stat-label">Avaliacao Media</div>
+                        </div>
+                    </div>
+                    <div class="c-xs-6 c-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-target="120">0</span>h
+                            </div>
+                            <div class="stat-label">de Conteudo</div>
+                        </div>
+                    </div>
+                    <div class="c-xs-6 c-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">
+                                <span class="counter" data-target="98">0</span>%
+                            </div>
+                            <div class="stat-label">Taxa de Aprovacao</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits p-100-tb xs-p-60-tb" id="beneficios">
+        <div class="container">
+            <div class="text-center m-60-b xs-m-40-b">
+                <div class="section-badge wow fadeInUp">
+                    <span class="iccon-star-1"></span>
+                    Diferenciais
+                </div>
+                <h2 class="fs-13 md-fs-11 xs-fs-9 section-title wow fadeInUp" data-wow-delay="0.1s">
+                    Por que escolher o <span class="text-gradient">EcoVida</span>?
+                </h2>
+                <p class="fs-9 section-subtitle wow fadeInUp" data-wow-delay="0.2s">
+                    Aprenda com especialistas renomados e transforme sua carreira na area ambiental
+                </p>
+            </div>
+
+            <div class="row gap-25">
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-certificate-1"></span>
+                        </div>
+                        <h3 class="benefit-title">Certificado Reconhecido</h3>
+                        <p class="benefit-text">Certificado valido em todo territorio nacional, reconhecido por empresas e instituicoes de renome.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-laptop-1"></span>
+                        </div>
+                        <h3 class="benefit-title">100% Online</h3>
+                        <p class="benefit-text">Estude no seu ritmo, de qualquer lugar do mundo. Acesso vitalicio a todo o conteudo do curso.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-bb-users"></span>
+                        </div>
+                        <h3 class="benefit-title">Suporte Especializado</h3>
+                        <p class="benefit-text">Tire suas duvidas diretamente com professores especialistas em meio ambiente.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-book-2"></span>
+                        </div>
+                        <h3 class="benefit-title">Material Completo</h3>
+                        <p class="benefit-text">Apostilas, videoaulas em HD, exercicios praticos e estudos de caso reais do mercado.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-comment-1"></span>
+                        </div>
+                        <h3 class="benefit-title">Comunidade Ativa</h3>
+                        <p class="benefit-text">Faca networking com outros profissionais e alunos engajados na causa ambiental.</p>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-6 c-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <span class="iccon-redo-1"></span>
+                        </div>
+                        <h3 class="benefit-title">Atualizacoes Gratuitas</h3>
+                        <p class="benefit-text">Conteudo sempre atualizado com as ultimas praticas sustentaveis e legislacao ambiental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing p-100-tb xs-p-60-tb" id="planos">
+        <div class="shape-leaf floating"></div>
+
+        <div class="container">
+            <div class="text-center m-60-b xs-m-40-b">
+                <div class="section-badge wow fadeInUp">
+                    <span class="iccon-tag-1"></span>
+                    Investimento
+                </div>
+                <h2 class="fs-13 md-fs-11 xs-fs-9 section-title wow fadeInUp" data-wow-delay="0.1s">
+                    Escolha seu <span class="text-gradient">plano ideal</span>
+                </h2>
+                <p class="fs-9 section-subtitle wow fadeInUp" data-wow-delay="0.2s">
+                    Invista no seu futuro e no futuro do planeta
+                </p>
+            </div>
+
+            <div class="row gap-25 f-items-stretch">
+                <!-- PLANO BASICO -->
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="pricing-card">
+                        <div class="pricing-icon basic">
+                            <span class="iccon-heart-1"></span>
+                        </div>
+                        <h3 class="pricing-title">Basico</h3>
+                        <p class="pricing-desc">Ideal para iniciantes</p>
+                        <div class="pricing-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">297</span>
+                        </div>
+                        <p class="pricing-period">Pagamento unico</p>
+                        <ul class="pricing-features">
+                            <li><span class="check-icon">&#10003;</span> Acesso por 6 meses</li>
+                            <li><span class="check-icon">&#10003;</span> 40 videoaulas</li>
+                            <li><span class="check-icon">&#10003;</span> Apostila digital</li>
+                            <li><span class="check-icon">&#10003;</span> Certificado de conclusao</li>
+                            <li><span class="check-icon">&#10003;</span> Suporte via e-mail</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary w-100">Comecar Agora</a>
+                    </div>
+                </div>
+
+                <!-- PLANO INTERMEDIARIO (DESTAQUE) -->
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Mais Popular</div>
+                        <div class="pricing-icon pro">
+                            <span class="iccon-idea-1"></span>
+                        </div>
+                        <h3 class="pricing-title">Intermediario</h3>
+                        <p class="pricing-desc">Para profissionais</p>
+                        <div class="pricing-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">497</span>
+                        </div>
+                        <p class="pricing-period">Pagamento unico</p>
+                        <ul class="pricing-features">
+                            <li><span class="check-icon">&#10003;</span> Acesso por 12 meses</li>
+                            <li><span class="check-icon">&#10003;</span> 80 videoaulas</li>
+                            <li><span class="check-icon">&#10003;</span> Apostila + Ebooks extras</li>
+                            <li><span class="check-icon">&#10003;</span> Certificado reconhecido</li>
+                            <li><span class="check-icon">&#10003;</span> Suporte prioritario</li>
+                            <li><span class="check-icon">&#10003;</span> Grupo exclusivo</li>
+                            <li><span class="check-icon">&#10003;</span> 3 mentorias ao vivo</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary w-100">Comecar Agora</a>
+                    </div>
+                </div>
+
+                <!-- PLANO PREMIUM -->
+                <div class="c-xs-12 c-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="pricing-card">
+                        <div class="pricing-icon premium">
+                            <span class="iccon-sitemap-1"></span>
+                        </div>
+                        <h3 class="pricing-title">Premium</h3>
+                        <p class="pricing-desc">Experiencia completa</p>
+                        <div class="pricing-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">797</span>
+                        </div>
+                        <p class="pricing-period">Pagamento unico</p>
+                        <ul class="pricing-features">
+                            <li><span class="check-icon">&#10003;</span> Acesso vitalicio</li>
+                            <li><span class="check-icon">&#10003;</span> +120 videoaulas</li>
+                            <li><span class="check-icon">&#10003;</span> Todo material impresso</li>
+                            <li><span class="check-icon">&#10003;</span> Certificado internacional</li>
+                            <li><span class="check-icon">&#10003;</span> Suporte 24/7</li>
+                            <li><span class="check-icon">&#10003;</span> Comunidade VIP</li>
+                            <li><span class="check-icon">&#10003;</span> Mentorias ilimitadas</li>
+                            <li><span class="check-icon">&#10003;</span> Acesso a eventos</li>
+                        </ul>
+                        <a href="#" class="btn btn-accent w-100">Comecar Agora</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center m-50-t wow fadeInUp" data-wow-delay="0.4s">
+                <div class="guarantee-badge m-auto-lr">
+                    <div class="guarantee-icon">
+                        <span class="iccon-lock-1"></span>
+                    </div>
+                    <div class="text-left">
+                        <div class="fw-600 fs-8">Pagamento 100% Seguro</div>
+                        <div class="fs-7 text-gray">Parcele em ate 12x sem juros no cartao</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials p-100-tb xs-p-60-tb" id="depoimentos">
+        <div class="container">
+            <div class="text-center m-60-b xs-m-40-b">
+                <div class="section-badge wow fadeInUp">
+                    <span class="iccon-comment-1"></span>
+                    Depoimentos
+                </div>
+                <h2 class="fs-13 md-fs-11 xs-fs-9 section-title wow fadeInUp" data-wow-delay="0.1s">
+                    O que dizem nossos <span class="text-gradient">alunos</span>
+                </h2>
+                <p class="fs-9 section-subtitle wow fadeInUp" data-wow-delay="0.2s">
+                    Historias reais de transformacao profissional
+                </p>
+            </div>
+
+            <div class="slide__viewport wow fadeInUp" data-wow-delay="0.3s">
+                <div class="slide__row gap-25">
+                    <div class="slide__item c-xs-12 c-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                            </div>
+                            <p class="testimonial-text">
+                                "O curso superou minhas expectativas! Consegui implementar praticas sustentaveis na empresa onde trabalho e fui promovida. O conteudo e muito completo e os professores sao excelentes."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">MR</div>
+                                <div class="testimonial-info">
+                                    <h4>Maria Rita Silva</h4>
+                                    <p>Gestora Ambiental</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Excelente investimento! As aulas sao dinamicas e os casos praticos me ajudaram muito a entender como aplicar o conhecimento no dia a dia. Recomendo para todos."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">JS</div>
+                                <div class="testimonial-info">
+                                    <h4>Joao Santos</h4>
+                                    <p>Consultor Ambiental</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Comecei do zero e hoje atuo como consultora ambiental. O curso me deu toda a base teorica e pratica que eu precisava. A comunidade e muito acolhedora!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">AP</div>
+                                <div class="testimonial-info">
+                                    <h4>Ana Paula Costa</h4>
+                                    <p>Consultora Independente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide__item c-xs-12 c-md-6">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                                <span class="iccon-star-1"></span>
+                            </div>
+                            <p class="testimonial-text">
+                                "A flexibilidade de estudar online foi fundamental para mim. Consegui conciliar com meu trabalho e ainda tive suporte de qualidade. Valeu cada centavo!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">CF</div>
+                                <div class="testimonial-info">
+                                    <h4>Carlos Fernandes</h4>
+                                    <p>Engenheiro Ambiental</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slide__prev" aria-label="Anterior">
+                    <span class="iccon-bb-chevron-left"></span>
+                </button>
+                <button class="slide__next" aria-label="Proximo">
+                    <span class="iccon-bb-chevron-right"></span>
+                </button>
+
+                <div class="slide__dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq p-100-tb xs-p-60-tb" id="faq">
+        <div class="container">
+            <div class="text-center m-60-b xs-m-40-b">
+                <div class="section-badge wow fadeInUp">
+                    <span class="iccon-question-1"></span>
+                    Duvidas
+                </div>
+                <h2 class="fs-13 md-fs-11 xs-fs-9 section-title wow fadeInUp" data-wow-delay="0.1s">
+                    Perguntas <span class="text-gradient">Frequentes</span>
+                </h2>
+                <p class="fs-9 section-subtitle wow fadeInUp" data-wow-delay="0.2s">
+                    Tire suas duvidas sobre o curso
+                </p>
+            </div>
+
+            <div class="w-800px m-auto-lr xs-w-100">
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="faq-question">
+                        <span>O curso possui certificado?</span>
+                        <span class="faq-icon"><span class="iccon-bb-chevron-down"></span></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Sim! Todos os nossos planos incluem certificado de conclusao. O certificado e emitido digitalmente apos a conclusao de todas as aulas e aprovacao nas avaliacoes.</p>
+                            <br>
+                            <p><strong>O certificado e valido para:</strong></p>
+                            <ul class="m-15-t">
+                                <li>Horas complementares em faculdades</li>
+                                <li>Processos seletivos de empresas</li>
+                                <li>Comprovacao de capacitacao profissional</li>
+                                <li>Evolucao funcional no servico publico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="faq-question">
+                        <span>Quanto tempo tenho para concluir o curso?</span>
+                        <span class="faq-icon"><span class="iccon-bb-chevron-down"></span></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p><strong>Prazos de acesso por plano:</strong></p>
+                            <ul class="m-15-t m-15-b">
+                                <li><strong>Basico:</strong> 6 meses de acesso</li>
+                                <li><strong>Intermediario:</strong> 12 meses de acesso</li>
+                                <li><strong>Premium:</strong> Acesso vitalicio</li>
+                            </ul>
+                            <p>Durante o periodo de acesso, voce pode assistir as aulas quantas vezes quiser e no seu proprio ritmo. A maioria dos alunos conclui o curso entre 2 a 4 meses.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="faq-question">
+                        <span>Preciso de conhecimentos previos?</span>
+                        <span class="faq-icon"><span class="iccon-bb-chevron-down"></span></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p><strong>Nao!</strong> O curso foi desenvolvido para atender desde iniciantes ate profissionais que desejam se especializar.</p>
+                            <br>
+                            <p>Comecamos do basico, explicando conceitos fundamentais de meio ambiente, sustentabilidade e legislacao ambiental de forma clara e didatica. O unico requisito e ter vontade de aprender!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="faq-question">
+                        <span>Como funciona o suporte?</span>
+                        <span class="faq-icon"><span class="iccon-bb-chevron-down"></span></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Oferecemos diferentes niveis de suporte de acordo com seu plano:</p>
+                            <ul class="m-15-t">
+                                <li><strong>Plano Basico:</strong> Suporte via e-mail com resposta em ate 48h</li>
+                                <li><strong>Plano Intermediario:</strong> Suporte prioritario (24h) + grupo exclusivo + 3 mentorias ao vivo</li>
+                                <li><strong>Plano Premium:</strong> Suporte 24/7 + comunidade VIP + mentorias ilimitadas + consultoria individual</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="faq-question">
+                        <span>Posso parcelar o pagamento?</span>
+                        <span class="faq-icon"><span class="iccon-bb-chevron-down"></span></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p><strong>Sim!</strong> Oferecemos diversas opcoes de pagamento:</p>
+                            <ul class="m-15-t m-15-b">
+                                <li><strong>Cartao de Credito:</strong> Parcele em ate 12x sem juros</li>
+                                <li><strong>Boleto Bancario:</strong> Pagamento a vista com 10% de desconto</li>
+                                <li><strong>PIX:</strong> Pagamento a vista com 15% de desconto</li>
+                            </ul>
+                            <p>Todos os pagamentos sao processados em ambiente seguro com criptografia SSL.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta p-100-tb xs-p-60-tb text-center">
+        <div class="shape-blob"></div>
+
+        <div class="container ps-relative z-index-1">
+            <div class="w-700px m-auto-lr xs-w-100">
+                <h2 class="fs-14 md-fs-12 xs-fs-10 m-20-b wow fadeInUp">
+                    Pronto para fazer a diferenca?
+                </h2>
+                <p class="fs-9 m-40-b opacity-9 wow fadeInUp" data-wow-delay="0.1s">
+                    Junte-se a mais de 5.000 alunos que ja transformaram suas carreiras e estao contribuindo para um futuro mais sustentavel.
+                </p>
+                <div class="d-flex f-justify-center f-gap-20 f-wrap wow fadeInUp" data-wow-delay="0.2s">
+                    <a href="#planos" class="btn btn-white">
+                        <span class="iccon-rocket-1"></span>
+                        Comece sua jornada agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO PROMO WIDGET -->
+    <div class="video-promo-widget" id="videoPromoWidget">
+        <div class="promo-bubble" id="promoBubble">
+            <button class="promo-bubble-close" id="closeBubble" aria-label="Fechar">
+                <span class="iccon-close-1"></span>
+            </button>
+            <div class="promo-new-tag">
+                <span class="iccon-play-1"></span>
+                Novo Video
+            </div>
+            <h4 class="promo-bubble-title">Aula Especial Liberada!</h4>
+            <p class="promo-bubble-text">Descubra os 5 segredos da sustentabilidade que vao transformar sua carreira.</p>
+            <button class="promo-bubble-btn" id="openVideoModal">
+                <span class="iccon-play-1"></span>
+                Assistir Agora
+            </button>
+        </div>
+        <div class="promo-trigger" id="promoTrigger">
+            <span class="iccon-play-1"></span>
+            <span class="promo-badge">1</span>
+        </div>
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="closeVideoModal" aria-label="Fechar">
+                <span class="iccon-close-1"></span>
+            </button>
+            <div class="video-modal-player">
+                <div class="play-button-large">
+                    <span class="iccon-play-1"></span>
+                </div>
+                <p class="fs-9 opacity-8">Clique para reproduzir</p>
+            </div>
+            <div class="video-modal-info">
+                <h3 class="video-modal-title">5 Segredos da Sustentabilidade Corporativa</h3>
+                <p class="video-modal-desc">Nesta aula exclusiva, voce vai aprender as estrategias que as grandes empresas usam para implementar praticas sustentaveis e reduzir custos.</p>
+                <div class="video-modal-meta">
+                    <span><span class="iccon-clock-1"></span> 18 min</span>
+                    <span><span class="iccon-eye-1"></span> 2.847 visualizacoes</span>
+                    <span><span class="iccon-star-1"></span> 4.9</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer p-60-tb xs-p-40-tb">
+        <div class="container">
+            <div class="row gap-40">
+                <div class="c-xs-12 c-md-4">
+                    <div class="logo m-25-b">
+                        <span class="iccon-heart-1"></span>
+                        <span>EcoVida</span>
+                    </div>
+                    <p class="fs-8 text-light m-25-b">
+                        Educacao ambiental de qualidade para um futuro sustentavel. Transformando vidas e o planeta desde 2020.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <span class="iccon-instagram-1"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <span class="iccon-facebook-1"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <span class="iccon-youtube-1"></span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span class="iccon-linkedin-1"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="c-xs-6 c-sm-6 c-md-2">
+                    <h4 class="footer-title">Links</h4>
+                    <div class="footer-links">
+                        <a href="#beneficios">Beneficios</a>
+                        <a href="#planos">Planos</a>
+                        <a href="#depoimentos">Depoimentos</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                </div>
+
+                <div class="c-xs-6 c-sm-6 c-md-3">
+                    <h4 class="footer-title">Suporte</h4>
+                    <div class="footer-links">
+                        <a href="#">Central de Ajuda</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Politica de Privacidade</a>
+                        <a href="#">Contato</a>
+                    </div>
+                </div>
+
+                <div class="c-xs-12 c-sm-12 c-md-3">
+                    <h4 class="footer-title">Contato</h4>
+                    <div class="footer-links">
+                        <a href="mailto:contato@ecovida.com.br">
+                            <span class="iccon-envelope-1 m-5-r"></span>
+                            contato@ecovida.com.br
+                        </a>
+                        <a href="tel:+5511999999999">
+                            <span class="iccon-phone-1 m-5-r"></span>
+                            (11) 99999-9999
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex f-justify-between f-items-center f-wrap f-gap-20">
+                <p class="text-light fs-7">&copy; 2026 EcoVida. Todos os direitos reservados.</p>
+                <p class="text-light fs-7">Feito com <span class="primary">&#9829;</span> para o planeta</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Squeleton JavaScript (Footer) -->
+    <script src="https://cdn.squeleton.dev/squeleton-scripts.v4.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // === HEADER SCROLL EFFECT ===
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // === COUNTER ANIMATION ===
+            const counters = document.querySelectorAll('.counter');
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px'
+            };
+
+            const counterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseFloat(counter.getAttribute('data-target'));
+                        const isDecimal = target % 1 !== 0;
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+
+                        const updateCounter = () => {
+                            current += step;
+                            if (current < target) {
+                                counter.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = isDecimal ? target.toFixed(1) : target;
+                            }
+                        };
+
+                        updateCounter();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+
+            counters.forEach(counter => counterObserver.observe(counter));
+
+            // === FAQ ACCORDION ===
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Fecha todos os outros
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Abre/fecha o clicado
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // === EMBLA CAROUSEL ===
+            const viewport = document.querySelector('.slide__viewport');
+            const prevBtn = document.querySelector('.slide__prev');
+            const nextBtn = document.querySelector('.slide__next');
+            const dotsContainer = document.querySelector('.slide__dots');
+
+            if (viewport && typeof EmblaCarousel !== 'undefined') {
+                const embla = EmblaCarousel(viewport, {
+                    align: 'start',
+                    loop: true,
+                    slidesToScroll: 1,
+                    breakpoints: {
+                        '(min-width: 768px)': { slidesToScroll: 2 }
+                    }
+                });
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => embla.scrollPrev());
+                }
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => embla.scrollNext());
+                }
+
+                // Dots
+                const slides = embla.slideNodes();
+                const snapCount = embla.scrollSnapList().length;
+
+                for (let i = 0; i < snapCount; i++) {
+                    const dot = document.createElement('button');
+                    dot.classList.add('slide__dot');
+                    dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
+                    dot.addEventListener('click', () => embla.scrollTo(i));
+                    dotsContainer.appendChild(dot);
+                }
+
+                const updateDots = () => {
+                    const dots = dotsContainer.querySelectorAll('.slide__dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('is-selected', index === embla.selectedScrollSnap());
+                    });
+                };
+
+                embla.on('select', updateDots);
+                updateDots();
+            }
+
+            // === SMOOTH SCROLL ===
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // === VIDEO PROMO WIDGET ===
+            const videoPromoWidget = document.getElementById('videoPromoWidget');
+            const promoBubble = document.getElementById('promoBubble');
+            const promoTrigger = document.getElementById('promoTrigger');
+            const closeBubble = document.getElementById('closeBubble');
+            const openVideoModal = document.getElementById('openVideoModal');
+            const videoModal = document.getElementById('videoModal');
+            const closeVideoModal = document.getElementById('closeVideoModal');
+
+            // Show widget after delay
+            setTimeout(() => {
+                videoPromoWidget.classList.add('visible');
+            }, 3000);
+
+            // Toggle bubble on trigger click
+            promoTrigger.addEventListener('click', () => {
+                if (promoBubble.style.display === 'none') {
+                    promoBubble.style.display = 'block';
+                    promoBubble.style.animation = 'bubble-entrance 0.5s ease-out forwards';
+                } else {
+                    openVideoModal.click();
+                }
+            });
+
+            // Close bubble
+            closeBubble.addEventListener('click', (e) => {
+                e.stopPropagation();
+                promoBubble.style.display = 'none';
+            });
+
+            // Open video modal
+            openVideoModal.addEventListener('click', () => {
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Close video modal
+            closeVideoModal.addEventListener('click', () => {
+                videoModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            // Close modal on backdrop click
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    videoModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close modal on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                    videoModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Hide widget when scrolling to bottom (near footer)
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                const footerTop = document.querySelector('.footer').offsetTop;
+                const windowHeight = window.innerHeight;
+
+                if (currentScroll + windowHeight > footerTop - 100) {
+                    videoPromoWidget.style.opacity = '0';
+                    videoPromoWidget.style.pointerEvents = 'none';
+                } else {
+                    videoPromoWidget.style.opacity = '1';
+                    videoPromoWidget.style.pointerEvents = 'auto';
+                }
+
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body>
+</html>
