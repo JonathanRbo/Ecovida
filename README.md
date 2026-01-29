@@ -1,7 +1,5 @@
 # 🌱 Curso de Meio Ambiente | Sustentabilidade na Prática
 
-> Curso completo de Meio Ambiente - Aprenda práticas sustentáveis e transforme o futuro do planeta
-
 ---
 
 ## 🎯 Transforme o Futuro com **Sustentabilidade**
