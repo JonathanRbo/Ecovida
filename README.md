@@ -1,5 +1,4 @@
 # 🌱 Curso de Meio Ambiente | Sustentabilidade na Prática
-
 ---
 
 ## 🎯 Transforme o Futuro com **Sustentabilidade**
